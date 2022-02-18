@@ -1,0 +1,222 @@
+body {
+  background-color: #e2ece2;
+  font-size: 25px;
+  text-align: center;
+}
+
+.taskbar {
+  border: 1px solid grey;
+  border-radius: 5px;
+  width: 100vw;
+  min-height: 95vh;
+}
+
+.taskbar__info {
+  height: 150px;
+  border-bottom: 1px solid grey;
+  background-color: #176654;
+  color: #fff;
+  -webkit-transition: 0.5s linear;
+  -o-transition: 0.5s linear;
+  transition: 0.5s linear;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  cursor: pointer;
+}
+
+.taskbar__info:hover {
+  background-color: #f4ca16;
+  color: #000;
+}
+
+.taskbar__info-time {
+  font-size: 46px;
+  padding-top: 10px;
+}
+
+.taskbar__info-date {
+  margin-top: 40px;
+  font-size: 30px;
+}
+
+.taskbar__tasks {
+  width: 70%;
+  margin: 30px auto 10px auto;
+  font-family: 'Tahoma';
+  font-size: 18px;
+}
+
+.enter-task {
+  font-family: 'Tahoma';
+  font-size: 15px;
+  padding: 20px;
+}
+
+.enter-task:focus {
+  outline: none !important;
+  border-color: #176654;
+  box-shadow: 5px 5px 5px #176654;
+}
+
+.enter-task::placeholder {
+  font-size: 22px;
+  text-align: center;
+}
+
+.taskbar__buttons {
+  margin: 170px auto 10px auto;
+}
+
+.button {
+  font-family: 'Arial';
+  font-size: 18px;
+  -webkit-transition: 0.2s linear;
+  -o-transition: 0.2s linear;
+  transition: 0.2s linear;
+  padding: 10px 22px;
+  border-radius: 5px;
+  margin-left: 20px;
+}
+
+.button:first-child {
+  margin-left: 0;
+}
+
+.addtask {
+  background-color: #176654;
+  color: #fff;
+}
+
+.addtask:hover {
+  background-color: #f4ca16;
+  color: #000;
+}
+
+.deletetask {
+  background-color: #176654;
+  color: #fff;
+}
+
+.deletetask:hover {
+  background-color: #eb4c42;
+  color: #000;
+}
+
+p {
+  margin: 20px auto;
+  text-align: left;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+p:hover {
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
+  color: #eb4c42;
+}
+
+.none {
+  display: none;
+}
+
+.appear {
+  display: block;
+}
+
+@media screen and (max-width: 480px) {
+  .taskbar {
+    width: 99%;
+    height: 99%;
+  }
+
+  .taskbar__info {
+    width: 99%;
+  }
+
+  .taskbar__info-time {
+    font-size: 40px;
+  }
+
+  .taskbar__info-year {
+    display: none;
+  }
+
+  .taskbar__tasks {
+    font-size: 20px;
+  }
+
+  .enter-task {
+    width: 95%;
+    left: 3px;
+    font-size: 16px;
+  }
+
+  .taskbar__buttons {
+    left: 16%;
+  }
+
+  .button {
+    font-size: 22px;
+    padding: 2px 14px;
+  }
+
+  p {
+    display: table;
+    margin: 10px auto 0 auto;
+  }
+}
+
+@media screen and (max-height: 400px) {
+  .taskbar {
+    width: 99%;
+    min-height: 300px;
+  }
+
+  .taskbar__info {
+    width: 99%;
+    height: 60px;
+  }
+
+  .taskbar__info-time {
+    font-size: 40px;
+    display: none;
+  }
+
+  .taskbar__info-day {
+    margin-top: 15px;
+  }
+
+  .taskbar__info-year {
+    display: none;
+  }
+
+  .taskbar__tasks {
+    margin-top: 100px;
+    padding-bottom: 10px;
+  }
+
+  .enter-task {
+    width: 95%;
+    left: 3px;
+    font-size: 16px;
+  }
+
+  .taskbar__buttons {
+    left: 38%;
+  }
+
+  .button {
+    font-size: 18px;
+    padding: 2px 12px;
+  }
+
+  p {
+    margin-top: 7px;
+  }
+}
